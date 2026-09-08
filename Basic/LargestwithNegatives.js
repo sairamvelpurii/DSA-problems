@@ -1,7 +1,7 @@
-let arr = [1,8,27,58,6,2,4,62,45,61];
+let arr = [1,8,27,58,-6,2,4,-62,45,-61];
 
-let maxNumber = 0;
-let secondMaxNumber = 0;
+let maxNumber = -Infinity;
+let secondMaxNumber = -Infinity;
 
 for(let i=0;i<arr.length;i++){
   if(arr[i]>maxNumber){
@@ -9,7 +9,7 @@ for(let i=0;i<arr.length;i++){
     maxNumber = arr[i];
   }
   // even if the current i is not greater than max and could be greater than second max 
-  else if(arr[i]>secondMaxNumber && arr[i]<maxNumber){
+  else if(arr[i]>secondMaxNumber && arr[i]!== maxNumber){
     secondMaxNumber = arr[i]; 
   }
 }
